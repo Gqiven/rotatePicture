@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ScatteredPolaroidsGallery</title>
+	<link rel="stylesheet" href="./stylesheets/style.css">
+	<script type="text/javascript" src="./stylesheets/jquery-1.11.2.min.js"></script>
+	<!--<style type="text/css">
+	.photo-wrap.side{
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+	}
+	.photo-wrap.side-front{
+		transform: roateY(0deg);
+		-webkit-transform: roateY(0deg)
+	}
+	.photo-wrap.side-back{
+		transform: roateY(180deg);
+		-webkit-transform: roateY(180deg)
+	}
+
+	.photo_front.photo-wrap{
+		transform: roateY(0deg);
+		-webkit-transform: roateY(0deg)
+	}
+	.photo_back.photo-wrap{
+		transform: roateY(180deg);
+		-webkit-transform: roateY(180deg)
+	}/**/
+	</style>-->
+</head>
+<body onselectstart="return false">
+	<div class="wrap">
+		<div class="photo photo-center">
+			<!--photo负责平移和旋转-->
+			<div class="photo-wrap photo_front" onclick="turn(this)">
+				<!--photo-wrap用于翻转-->
+				<div class="side side-front">
+					<p class="image">
+						<img src="./images/1.jpg" alt="">
+					</p>
+					<p class="caption">Serenity Beach</p>
+				</div>
+				<div class="side side-back">
+					<p class="desc">
+						I have never been to a place so serene in my entire life before. Swimming in clear waters opened my mind to nature and reminded me of my and  everybody else's mortality.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<script type="text/javascript">
+	//$(document).ready(function(){
+		function turn(e){
+			var cls = e.className;
+			if(/photo_front/.test(cls)){
+				cls = cls.replace(/photo_front/,"photo_back");
+			}else{
+				cls = cls.replace(/photo_back/,"photo_front");
+			}
+			return e.className = cls;
+		}
+		//turn();
+	//}
+	</script>
+</body>
+</html>

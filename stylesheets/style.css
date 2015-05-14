@@ -1,0 +1,110 @@
+/* line 1, ../sass/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 5, ../sass/style.scss */
+body {
+  color: #555;
+  font-family: "Avenir Next","Lantinghei SC";
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 11, ../sass/style.scss */
+.wrap {
+  width: 100%;
+  height: 580px;
+  background: #333;
+  position: relative;
+  overflow: hidden;
+  perspective: 500px;
+  -webkit-perspective: 500px;
+  /* Safari  Chrome */
+  /*-webkit-perspective: 800px;*/
+}
+/* line 21, ../sass/style.scss */
+.wrap .photo {
+  width: 240px;
+  height: 280px;
+  padding: 20px;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
+  position: absolute;
+  /*.side{
+  	width: 100%;
+  	height: 100%;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	background: #eee;
+  	box-sizing: border-box;}*/
+}
+/* line 38, ../sass/style.scss */
+.wrap .photo .photo-wrap {
+  position: absolute;
+  width: 240px;
+  height: 280px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: all .6s;
+  -webkit-transition: all .6s;
+}
+/* line 52, ../sass/style.scss */
+.wrap .photo .photo-wrap .side-front {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+}
+/* line 59, ../sass/style.scss */
+.wrap .photo .photo-wrap .side-front .image img {
+  width: 100%;
+}
+/* line 63, ../sass/style.scss */
+.wrap .photo .photo-wrap .side-front .caption {
+  text-align: center;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+}
+/* line 72, ../sass/style.scss */
+.wrap .photo .photo-wrap .side-back {
+  position: absolute;
+  top: 0;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+/* line 77, ../sass/style.scss */
+.wrap .photo .photo-wrap .side-back .desc {
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #666;
+}
+/* line 85, ../sass/style.scss */
+.wrap .photo-center {
+  left: 50%;
+  top: 50%;
+  margin: -140px 0 0 -120px;
+  z-index: 999;
+}
+/* line 91, ../sass/style.scss */
+.wrap .side {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+/* line 97, ../sass/style.scss */
+.wrap .photo_front {
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+}
+/* line 101, ../sass/style.scss */
+.wrap .photo_back {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
